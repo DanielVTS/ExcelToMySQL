@@ -12,22 +12,6 @@ public class ReturnMapHandler {
         return map;
     }
 
-
-    public static Map<String, String> getPhoneExistMap() {
-        Map<String, String> map = new HashMap();
-        map.put("code", Integer.toString(409));
-        map.put("message", "User with the same phone number exist!");
-        return map;
-    }
-
-    public static Map<String, String> getEmptyRecordMap() {
-        Map<String, String> map = new HashMap();
-        map.put("code", Integer.toString(409));
-        map.put("message", "No record!");
-        return map;
-    }
-
-
     public static Map<String, String> getErrorMap(int result) {
         Map<String, String> map = new HashMap();
         System.out.println("数据库异常,影响记录：" + result + "条");

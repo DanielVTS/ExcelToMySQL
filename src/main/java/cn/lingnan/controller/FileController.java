@@ -31,7 +31,7 @@ public class FileController {
     }
 
 
-    @PostMapping("uploadExcelFile")
+    @PostMapping("/uploadExcelFile")
     public Map ExcelFileHandler(@RequestParam("file") MultipartFile mFile) {
         File file = null;
         try {
