@@ -1,0 +1,27 @@
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 200MB
+      max-request-size: 215MB
+  application:
+    name: demo-ExcelToMySQL
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 456987
+    url: jdbc:mysql://127.0.0.1:3306/Student?useTimezone=true&serverTimezone=GMT%2B8
+server:
+  port: 8080
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: cn.lingnan.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  cn.lingnan.mapper:debug
+
+
